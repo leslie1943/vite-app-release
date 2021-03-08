@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <HelloWorld msg="Test props" />
 </template>
 
 <script lang="ts">
@@ -8,12 +8,7 @@ import HelloWorld from '../../components/HelloWorld.vue'
 export default defineComponent({
   name: 'Home',
   components: { HelloWorld },
-  props: {
-    msg: {
-      type: String,
-      required: true,
-    },
-  },
+  props: {},
   setup: () => {
     const count = ref(0)
     return { count }

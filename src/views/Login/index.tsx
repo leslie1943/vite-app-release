@@ -9,8 +9,8 @@ const App = defineComponent({
     const router = useRouter()
     // 定义 data 数据
     const count = ref(0)
-    const username = ref('')
-    const password = ref('')
+    const username = ref('admin')
+    const password = ref('123456')
 
     const onLogin = () => {
       // router.push('/')

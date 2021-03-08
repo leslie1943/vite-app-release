@@ -1,11 +1,13 @@
 import axios from 'axios'
+import { AxiosRequestConfig, AxiosResponse } from 'axios'
+
 const service = axios.create({
   baseURL: '',
   timeout: 5000, // request timeout
 })
 // 发起请求之前的拦截器
 service.interceptors.request.use(
-  (config) => {
+  (config: AxiosRequestConfig) => {
     // 如果有token 就携带tokon
     const token = window.localStorage.getItem('accessToken')
     if (token) {
@@ -15,15 +17,15 @@ service.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 )
+
 // 响应拦截器
 service.interceptors.response.use(
-  (response) => {
+  (response: AxiosResponse) => {
     const res = response.data
-
     if (response.status !== 200) {
-      return Promise.reject(new Error(res.message || 'Error'))
+      return Promise.reject(new Error(response.data.message || 'Error'))
     } else {
-      return res
+      return response
     }
   },
   (error) => {
@@ -31,10 +33,3 @@ service.interceptors.response.use(
   }
 )
 export default service
-
-/**
-    import request from "../utils/request";
-    request({url: "/profile ",method: "get"}).then((res)=>{
-        console.log(res)
-    })
- */
