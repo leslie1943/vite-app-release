@@ -29,10 +29,14 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
+      '/gdszyepro': {
+        target: 'https://epro-ps231-gdszy.test.viewchain.net/gdszyepro',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/gdszyepro/, ''),
+      },
     },
     cors: true,
   },
-  esbuild: {
-    // jsxInject: `import React from 'react'`,
-  },
+  esbuild: {},
 })

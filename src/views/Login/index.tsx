@@ -1,11 +1,21 @@
 import { defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router'
+
 import './login.scss'
 
 const App = defineComponent({
   setup() {
+    // 路由需要全局声明
+    const router = useRouter()
+    // 定义 data 数据
     const count = ref(0)
-    const username = ref('')
-    const password = ref('')
+    const username = ref('admin')
+    const password = ref('123456')
+
+    const onLogin = () => {
+      // router.push('/')
+      router.push({ path: '/' })
+    }
 
     return () => (
       <>
@@ -34,7 +44,7 @@ const App = defineComponent({
                     <el-button
                       class="login-btn"
                       type="success"
-                      onClick={() => count.value++}
+                      onClick={onLogin}
                     >
                       登录
                     </el-button>
