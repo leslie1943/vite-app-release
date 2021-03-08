@@ -1,0 +1,41 @@
+export interface ProjectState {
+  archived: Boolean
+  avatar_url: String
+  container_registry_enabled: true
+  created_at: String
+  creator_id: Number
+  default_branch: String
+  description: String
+  forks_count: Number
+  http_url_to_repo: String
+  id: Number
+  issues_enabled: Boolean
+  jobs_enabled: Boolean
+  last_activity_at: String
+  lfs_enabled: Boolean
+  merge_requests_enabled: Boolean
+  name: String
+  name_with_namespace: String
+  namespace: {
+    id: Number
+    name: String
+    path: String
+    kind: String
+    full_path: String
+  }
+  only_allow_merge_if_all_discussions_are_resolved: Boolean
+  only_allow_merge_if_pipeline_succeeds: Boolean
+  path: String
+  path_with_namespace: String
+  public_jobs: Boolean
+  request_access_enabled: Boolean
+  shared_runners_enabled: Boolean
+  shared_with_groups: []
+  snippets_enabled: Boolean
+  ssh_url_to_repo: String
+  star_count: Number
+  tag_list: []
+  visibility: String
+  web_url: String
+  wiki_enabled: Boolean
+}
