@@ -3,7 +3,7 @@ import request from '../util/request'
 const getRegions = async () => {
   return await request('/gdszyepro/api/base/getAllRegions', {
     method: 'GET',
-    headers: { Authorization: window.localStorage.getItem('Authorization') },
+    // headers: { Authorization: window.localStorage.getItem('Authorization') },
   })
 }
 

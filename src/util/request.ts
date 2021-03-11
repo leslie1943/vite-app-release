@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { getStore } from '../util/localStore'
 
 const service = axios.create({
   baseURL: '',
@@ -9,9 +10,9 @@ const service = axios.create({
 service.interceptors.request.use(
   (config: AxiosRequestConfig) => {
     // 如果有token 就携带tokon
-    const token = window.localStorage.getItem('accessToken')
+    const token = getStore('Authorization')
     if (token) {
-      config.headers.common.Authorization = token
+      config.headers.Authorization = token
     }
     return config
   },
@@ -21,7 +22,6 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   (response: AxiosResponse) => {
-    const res = response.data
     if (response.status !== 200) {
       return Promise.reject(new Error(response.data.message || 'Error'))
     } else {
