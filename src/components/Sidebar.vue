@@ -38,6 +38,16 @@
         <el-menu-item index="/">选项3</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
+    <el-submenu index="3">
+      <template #title>
+        <i class="el-icon-sugar"></i>
+        <span>MongoDB 操作</span>
+      </template>
+
+      <el-menu-item-group>
+        <el-menu-item index="/mongodb">mongodb</el-menu-item>
+      </el-menu-item-group>
+    </el-submenu>
   </el-menu>
 </template>
 

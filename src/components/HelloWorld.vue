@@ -1,5 +1,6 @@
 <template>
   <div v-loading="loading">
+    <el-button type="primary" @click="toLogin">登录 </el-button>
     <el-button type="primary" @click="onLogin">测试登录 </el-button>
     <el-divider></el-divider>
     <el-button type="primary" @click="listRegions">获取区域 </el-button>
@@ -44,6 +45,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 import apiProject from '../api/project'
 import apiGroup from '../api/group'
 import apiEpro from '../api/epro'
@@ -64,6 +66,11 @@ export default defineComponent({
     const repositories = ref()
     const groups = ref()
     const regions = ref([])
+    const router = useRouter()
+
+    const toLogin = async () => {
+      router.push('/login')
+    }
 
     // 获取 EPRO Regions
     const listRegions = async () => {
@@ -105,6 +112,7 @@ export default defineComponent({
       listRegions,
       onLogin,
       regions,
+      toLogin,
     }
   },
 })
