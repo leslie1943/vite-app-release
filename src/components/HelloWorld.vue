@@ -1,9 +1,16 @@
 <template>
   <div v-loading="loading">
+    <el-button type="primary" @click="toLogin">登录 </el-button>
     <el-button type="primary" @click="onLogin">测试登录 </el-button>
     <el-divider></el-divider>
     <el-button type="primary" @click="listRegions">获取区域 </el-button>
     <el-divider></el-divider>
+    <el-table border :data="regions">
+      <el-table-column label="Code" prop="code"></el-table-column>
+      <el-table-column label="Name" prop="name"></el-table-column>
+    </el-table>
+    <el-divider></el-divider>
+
     <!-- <el-button type="danger" @click="count++">count is: {{ count }}</el-button> -->
     <el-button type="primary" @click="listResps">获取EPRO仓库 </el-button>
     <el-divider></el-divider>
@@ -38,9 +45,12 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 import apiProject from '../api/project'
 import apiGroup from '../api/group'
 import apiEpro from '../api/epro'
+
+import { setStore } from '../util/localStore'
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -55,17 +65,25 @@ export default defineComponent({
     const loading = ref(false)
     const repositories = ref()
     const groups = ref()
+    const regions = ref([])
+    const router = useRouter()
+
+    const toLogin = async () => {
+      router.push('/login')
+    }
 
     // 获取 EPRO Regions
     const listRegions = async () => {
       const { data } = await apiEpro.getRegions()
       console.info('regions res', data.result)
+      regions.value = data.result
     }
 
+    // EPRO Login
     const onLogin = async () => {
       const { data } = await apiEpro.login()
       console.info('Login res', data)
-      window.localStorage.setItem('Authorization', data.result.token)
+      setStore('Authorization', data.result.token)
     }
 
     // 获取
@@ -93,6 +111,8 @@ export default defineComponent({
       groups,
       listRegions,
       onLogin,
+      regions,
+      toLogin,
     }
   },
 })

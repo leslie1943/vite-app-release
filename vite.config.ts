@@ -35,6 +35,13 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/gdszyepro/, ''),
       },
+      // 配置本地的 mongodb 开发的 api代理
+      '/sz': {
+        target: 'http://localhost:3000/sz',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/sz/, ''),
+      },
     },
     cors: true,
   },

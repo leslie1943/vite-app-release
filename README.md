@@ -24,3 +24,10 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
 3. Open `src/main.ts` in VSCode
 4. Open the VSCode command palette 5. Search and run "Select TypeScript version" -> "Use workspace version"
+
+
+### Vite Release
+- npm run build: 生成`dist`
+- 将`dist`整体 拷贝至 `nginx/html`目录下
+- `start nginx`: 启动服务
+- 浏览器查看`http://localhost:3343/`: `3343`是`nginx`配置的端口
