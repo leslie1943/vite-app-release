@@ -1,5 +1,8 @@
 <template>
   <div v-loading="loading">
+    <div class="color">
+      请先启动 【 MongoDB服务】 和 【 本地服务 node-mongodb-article 】
+    </div>
     <el-button type="primary" @click="listArticles">获取 Articles </el-button>
     <el-divider />
     <el-table border :data="artciles">
@@ -42,5 +45,9 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.color {
+  margin-bottom: 10px;
+  color: $color-required;
+}
 </style>

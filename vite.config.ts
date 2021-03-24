@@ -46,4 +46,12 @@ export default defineConfig({
     cors: true,
   },
   esbuild: {},
+  // 引入全局的预设的样式
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "./src/assets/scss/all.scss";',
+      },
+    },
+  },
 })

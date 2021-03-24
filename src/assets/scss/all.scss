@@ -1,0 +1,38 @@
+$color-primary: #5aaafa; //主题色
+$color-warning: #ed852f; //警告色
+$color-required: #f56c6c; //校验色（与饿了么组件保持一致）
+$color-danger: #ff001f; //错误色
+$color-success: #2ca02c; //成功色
+$color-light-success: #67c23a;
+$color-background: #f6f6f6; //基础背景色
+$color-border-enabled: #d2d2d2; //边框色(启用)
+$color-border-disabled: #e6e6e6; //边框色(非启用)
+$color-background-disable: #f5f7fa; // input 禁用背景色
+
+$color-base-white: #ffffff; //基础白色
+$color-base-black: #000000; //基础黑色
+$color-background-sidebar: #f7fbff; //sidebar选中项背景色
+$color-table-th: #e1effd;
+$color-shadow: rgba(0, 0, 0, 0.1); // 阴影颜色
+
+$color-font-title: #353535; //标题色
+$color-font-body: #353535; //正文色
+$color-font-sign: #939393; //标记
+$color-font-remark: #c5c5c5; //备注
+$color-font-val-enabled: #939393; //输入项内容色(启用)
+$color-font-val-disabled: #c5c5c5; //输入项内容色(非启用)
+$color-font-a: #606266;
+
+$font-size-super: 24rem/12; //超级大标题
+$font-size-large: 22rem/12; //大标题
+$font-size-h1: 20rem/12; //一级标题
+$font-size-h2: 18rem/12; //二级标题
+$font-size-h3: 16rem/12; //三级标题
+$font-size-body: 14rem/12; // 主题字体
+$font-size-body-small: 13rem/12; //主题小字体
+$font-size-assist: 12rem/12; //辅助字体
+$font-size-smallest: 10rem/12; //辅助字体
+
+$size-heigh-btn: 36rem/12;
+$size-input-btn: 36rem/12;
+$size-border-width: 1rem/12;

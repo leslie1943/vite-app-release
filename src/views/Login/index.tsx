@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 
 import './login.scss'
 
-const App = defineComponent({
+const Login = defineComponent({
   setup() {
     // 路由需要全局声明
     const router = useRouter()
@@ -67,4 +67,4 @@ const App = defineComponent({
     )
   },
 })
-export default App
+export default Login
