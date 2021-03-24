@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-aside width="200px"> <Sidebar /> </el-aside>
-    <el-container></el-container>
+    <!-- <el-container></el-container> -->
     <el-main>
       <!-- 路由出口 -->
       <router-view></router-view>

@@ -1,5 +1,3 @@
-// /groups/:id/subgroups
-
 import request from '../util/request'
 
 const getGroups = async () => {
