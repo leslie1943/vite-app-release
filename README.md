@@ -27,8 +27,15 @@ export default defineConfig({
 - 浏览器查看`http://localhost:3343/`: `2000`是`3343`配置的端口
 
 
-### Vite Release
-- npm run build: 生成`dist`
-- 将`dist`整体 拷贝至 `nginx/html`目录下
-- `start nginx`: 启动服务
-- 浏览器查看`http://localhost:3343/`: `3343`是`nginx`配置的端口
+### nginx 配置
+- api 代理修改配置才能让让接口前缀指向接口URL
+```nginx
+location /gdszyepro {
+  proxy_pass https://epro-ps231-gdszy.test.viewchain.net/gdszyepro;
+}
+
+location /api {
+  proxy_pass https://gitlab.devops.viewchain.net;
+}
+
+```
