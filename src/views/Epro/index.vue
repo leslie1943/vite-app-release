@@ -29,6 +29,11 @@
         </el-card>
       </el-col>
     </el-row>
+    <div class="svg-con">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-icon-test1" />
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -53,7 +58,7 @@ export default defineComponent({
     align-items: center;
   }
 
-  ::v-deep(.el-card__header) {
+  :deep(.el-card__header) {
     background: darkcyan;
   }
 
@@ -68,6 +73,14 @@ export default defineComponent({
   .box-card {
     margin: 20px;
     /* width: 480px; */
+  }
+
+  .svg-con {
+    width: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
