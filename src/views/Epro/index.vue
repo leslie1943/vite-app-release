@@ -31,18 +31,23 @@
     </el-row>
     <div class="svg-con">
       <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-icon-test1" />
+        <use xlink:href="#icon-zixunfenxiang" />
+      </svg>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-lansetanhao" />
       </svg>
     </div>
+    <Child name="苏慕舟" />
   </div>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
 import projects from '../../data/project'
+import Child from './child.vue'
 export default defineComponent({
   name: 'Home',
-  props: {},
+  components: { Child },
   setup: () => {
     const count = ref(0)
     return { count, projects }
