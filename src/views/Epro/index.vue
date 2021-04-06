@@ -37,20 +37,21 @@
         <use xlink:href="#icon-lansetanhao" />
       </svg>
     </div>
-    <Child name="苏慕舟" />
   </div>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue'
 import projects from '../../data/project'
-import Child from './child.vue'
 export default defineComponent({
   name: 'Home',
-  components: { Child },
+  components: {},
   setup: () => {
     const count = ref(0)
-    return { count, projects }
+    function changeEvent(val: string) {
+      console.info('val from child:', val)
+    }
+    return { count, projects, changeEvent }
   },
 })
 </script>

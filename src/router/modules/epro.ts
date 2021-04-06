@@ -15,6 +15,15 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/views/Epro/index.vue'),
       },
+      {
+        path: '/vue3/features',
+        name: 'Vue3 Features',
+        meta: {
+          title: 'Vue3 Features',
+          keepAlive: true,
+        },
+        component: () => import('@/views/Vue3/index.vue'),
+      },
     ],
   },
 ]
