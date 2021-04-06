@@ -57,6 +57,9 @@
       <el-menu-item-group>
         <el-menu-item index="/epro/projects">项目列表</el-menu-item>
       </el-menu-item-group>
+      <el-menu-item-group>
+        <el-menu-item index="/vue3/features">Vue3</el-menu-item>
+      </el-menu-item-group>
     </el-submenu>
   </el-menu>
 </template>
