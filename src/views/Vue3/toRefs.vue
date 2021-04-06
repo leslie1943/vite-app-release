@@ -25,7 +25,7 @@ export default {
       console.info(state.age.value)
       console.info(state.gender.value)
       console.info(' -----------  changing ----------- ')
-      state.name.value = 'Dora'
+      state.name.value = 'Andy'
       state.age.value = 18
       state.gender.value = 2
       console.info(' ----------- after change ----------- ')
