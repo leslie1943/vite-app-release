@@ -6,6 +6,12 @@
     <RefDemo />
     <el-divider>ToRefs</el-divider>
     <ToRefs />
+    <el-divider>ShallowReactive-reactive state</el-divider>
+    <ShallowReactiveSecond />
+    <el-divider>ShallowReactive-shallowReactive state</el-divider>
+    <ShallowReactiveOne />
+    <el-divider>ShallowReactive-change</el-divider>
+    <ShallowReactiveChange />
   </div>
 </template>
 
@@ -14,9 +20,19 @@ import { ref, defineComponent, reactive } from 'vue'
 import Child from './child.vue'
 import RefDemo from './ref-toRef.vue'
 import ToRefs from './toRefs.vue'
+import ShallowReactiveSecond from './shallowReactiveSecond.vue'
+import ShallowReactiveOne from './shallowReactiveOne.vue'
+import ShallowReactiveChange from './shallowReactiveChange.vue'
 export default defineComponent({
   name: 'Home',
-  components: { Child, RefDemo, ToRefs },
+  components: {
+    Child,
+    RefDemo,
+    ToRefs,
+    ShallowReactiveSecond,
+    ShallowReactiveOne,
+    ShallowReactiveChange,
+  },
   setup: () => {
     const count = ref(0)
     function changeEvent(val: string) {
