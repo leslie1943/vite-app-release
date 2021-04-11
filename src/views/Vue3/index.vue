@@ -12,6 +12,10 @@
     <ShallowReactiveOne />
     <el-divider>ShallowReactive-change</el-divider>
     <ShallowReactiveChange />
+    <el-divider>ShallowRef-change</el-divider>
+    <ShallowRef />
+    <el-divider>TriggerRef-change</el-divider>
+    <ShallowRefTriggerRef />
   </div>
 </template>
 
@@ -23,6 +27,8 @@ import ToRefs from './toRefs.vue'
 import ShallowReactiveSecond from './shallowReactiveSecond.vue'
 import ShallowReactiveOne from './shallowReactiveOne.vue'
 import ShallowReactiveChange from './shallowReactiveChange.vue'
+import ShallowRef from './shallowRef.vue'
+import ShallowRefTriggerRef from './shallowRefTriggerRef.vue'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -32,6 +38,8 @@ export default defineComponent({
     ShallowReactiveSecond,
     ShallowReactiveOne,
     ShallowReactiveChange,
+    ShallowRef,
+    ShallowRefTriggerRef,
   },
   setup: () => {
     const count = ref(0)
