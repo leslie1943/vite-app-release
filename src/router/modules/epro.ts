@@ -24,6 +24,15 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/views/Vue3/index.vue'),
       },
+      {
+        path: '/vue2/features',
+        name: 'Vue2 Features',
+        meta: {
+          title: 'Vue2 Features',
+          keepAlive: true,
+        },
+        component: () => import('@/views/Vue2/index.vue'),
+      },
     ],
   },
 ]

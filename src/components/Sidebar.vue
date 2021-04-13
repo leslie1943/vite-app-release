@@ -60,6 +60,9 @@
       <el-menu-item-group>
         <el-menu-item index="/vue3/features">Vue3</el-menu-item>
       </el-menu-item-group>
+       <el-menu-item-group>
+        <el-menu-item index="/vue2/features">Vue2</el-menu-item>
+      </el-menu-item-group>
     </el-submenu>
   </el-menu>
 </template>
