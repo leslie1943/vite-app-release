@@ -15,7 +15,7 @@ export default {
         }
       }
     }
-    // 将 obj 对象中所有的属性值都转换为响应式数据
+    // 将 obj 对象中第一层的数据转换为reactive的.
     const state = shallowReactive(obj)
     console.info('state', state)
     console.info('state', state.first)
