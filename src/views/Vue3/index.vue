@@ -18,6 +18,8 @@
     <ShallowRefTriggerRef />
     <el-divider>MarkRaw</el-divider>
     <MarkRaw />
+    <el-divider>ToRaw</el-divider>
+    <ToRaw />
   </div>
 </template>
 
@@ -32,6 +34,7 @@ import ShallowReactiveChange from './shallowReactiveChange.vue'
 import ShallowRef from './shallowRef.vue'
 import ShallowRefTriggerRef from './shallowRefTriggerRef.vue'
 import MarkRaw from './markRaw.vue'
+import ToRaw from './toRaw.tsx'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -44,6 +47,7 @@ export default defineComponent({
     ShallowRef,
     ShallowRefTriggerRef,
     MarkRaw,
+    ToRaw,
   },
   setup: () => {
     const count = ref(0)
