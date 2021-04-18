@@ -20,6 +20,8 @@
     <MarkRaw />
     <el-divider>ToRaw</el-divider>
     <ToRaw />
+    <el-divider>ProvideInject</el-divider>
+    <ProvideInject />
   </div>
 </template>
 
@@ -35,6 +37,7 @@ import ShallowRef from './shallowRef.vue'
 import ShallowRefTriggerRef from './shallowRefTriggerRef.vue'
 import MarkRaw from './markRaw.vue'
 import ToRaw from './toRaw.tsx'
+import ProvideInject from './provide-inject.tsx'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -48,6 +51,7 @@ export default defineComponent({
     ShallowRefTriggerRef,
     MarkRaw,
     ToRaw,
+    ProvideInject,
   },
   setup: () => {
     const count = ref(0)
