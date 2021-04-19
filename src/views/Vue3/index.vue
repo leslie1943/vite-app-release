@@ -22,6 +22,14 @@
     <ToRaw />
     <el-divider>ProvideInject</el-divider>
     <ProvideInject />
+    <el-divider>Watch Ref</el-divider>
+    <WatchRef />WatchReactive
+    <el-divider>Watch Reactive</el-divider>
+    <WatchReactive />
+    <el-divider>Watch Multipe </el-divider>
+    <WatchMultipe />
+    <el-divider>Watch Effect </el-divider>
+    <WatchEffect />
   </div>
 </template>
 
@@ -38,6 +46,10 @@ import ShallowRefTriggerRef from './shallowRefTriggerRef.vue'
 import MarkRaw from './markRaw.vue'
 import ToRaw from './toRaw.tsx'
 import ProvideInject from './provide-inject.tsx'
+import WatchRef from './watch-ref.tsx'
+import WatchReactive from './watch-reactive.tsx'
+import WatchMultipe from './watch-multipe.tsx'
+import WatchEffect from './watch-effect'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -52,6 +64,10 @@ export default defineComponent({
     MarkRaw,
     ToRaw,
     ProvideInject,
+    WatchRef,
+    WatchReactive,
+    WatchMultipe,
+    WatchEffect,
   },
   setup: () => {
     const count = ref(0)
