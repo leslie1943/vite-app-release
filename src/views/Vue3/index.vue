@@ -30,6 +30,8 @@
     <WatchMultipe />
     <el-divider>Watch Effect </el-divider>
     <WatchEffect />
+    <el-divider>CurrentInstance </el-divider>
+    <CurrentInstance />
   </div>
 </template>
 
@@ -50,6 +52,7 @@ import WatchRef from './watch-ref.tsx'
 import WatchReactive from './watch-reactive.tsx'
 import WatchMultipe from './watch-multipe.tsx'
 import WatchEffect from './watch-effect'
+import CurrentInstance from './current-instance'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -68,6 +71,7 @@ export default defineComponent({
     WatchReactive,
     WatchMultipe,
     WatchEffect,
+    CurrentInstance,
   },
   setup: () => {
     const count = ref(0)
