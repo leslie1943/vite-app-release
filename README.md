@@ -39,3 +39,26 @@ location /api {
 }
 
 ```
+
+
+### Jest
+- Install dependencies: `npm i jest vue-jest babel-jest -D`
+- `jest-vue-preprocessor` is needed for making jest understand .vue files, and babel-jest for the integration with Babel.
+- `npm i jest-vue-preprocessor -D`
+- `npm i -D vue-test-utils`
+- add following jest configration in the package.json
+```json
+  "jest": {
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    }
+  }
+```

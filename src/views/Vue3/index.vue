@@ -34,6 +34,8 @@
     <CurrentInstance />
     <el-divider>UseStore Demo </el-divider>
     <UseStoreDemo />
+    <el-divider>RefElement </el-divider>
+    <RefElement />
   </div>
 </template>
 
@@ -56,6 +58,7 @@ import WatchMultipe from './watch-multipe.tsx'
 import WatchEffect from './watch-effect'
 import CurrentInstance from './current-instance'
 import UseStoreDemo from './use-store-demo'
+import RefElement from './ref-element.vue'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -76,6 +79,7 @@ export default defineComponent({
     WatchEffect,
     CurrentInstance,
     UseStoreDemo,
+    RefElement,
   },
   setup: () => {
     const count = ref(0)

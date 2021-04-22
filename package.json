@@ -2,6 +2,7 @@
   "name": "vite-release",
   "version": "0.0.0",
   "scripts": {
+    "test": "jest",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
