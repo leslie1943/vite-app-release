@@ -12,3 +12,5 @@ import 'element-plus/lib/theme-chalk/index.css'
 createApp(App).use(router).use(store).use(ElementPlus).mount('#app')
 
 console.info(import.meta.env)
+console.info(import.meta.env.VITE_APP_BASE_API)
+console.info(import.meta.env.VITE_APP_TITLE)
