@@ -40,7 +40,6 @@ location /api {
 
 ```
 
-
 ### Jest
 - Install dependencies: `npm i jest vue-jest babel-jest -D`
 - `jest-vue-preprocessor` is needed for making jest understand .vue files, and babel-jest for the integration with Babel.
@@ -62,3 +61,17 @@ location /api {
     }
   }
 ```
+
+### .dot fine for different env
+```bash
+# JUST A FLAG For 开发环境
+ENV = 'development'
+
+# API BASE URL
+VITE_APP_BASE_API=https://epro.test.viewchain.net/epro # OK
+VITE_APP_TITLE=Leslie Release Tool # OK
+VITE_APP_TEST_ATTR=Leslie Release Tool # OK
+VITE_TEST_ATTR=Leslie Release Tool # OK
+TEST_ATTR=Leslie ATTR # NOT
+```
+- 必须以`VITE_`开头,配置完之后需要重新启动项目或者打包项目
