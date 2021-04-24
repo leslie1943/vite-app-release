@@ -1,4 +1,3 @@
-import { stat } from 'fs/promises'
 import { defineComponent, watchEffect, reactive } from 'vue'
 
 const WatchEffectDemo = defineComponent({

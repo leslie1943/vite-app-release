@@ -36,6 +36,9 @@
     <UseStoreDemo />
     <el-divider>RefElement </el-divider>
     <RefElement />
+    <el-divider>InputModel </el-divider>
+    <div>父组件 {{ title }}</div>
+    <InputModel v-model:title="title" />
   </div>
 </template>
 
@@ -59,6 +62,7 @@ import WatchEffect from './watch-effect'
 import CurrentInstance from './current-instance'
 import UseStoreDemo from './use-store-demo'
 import RefElement from './ref-element.vue'
+import InputModel from './V-Model-Input.vue'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -80,13 +84,15 @@ export default defineComponent({
     CurrentInstance,
     UseStoreDemo,
     RefElement,
+    InputModel,
   },
   setup: () => {
+    const title = ref('title')
     const count = ref(0)
     function changeEvent(val: string) {
       console.info('val from child:', val)
     }
-    return { count, changeEvent }
+    return { count, changeEvent, title }
   },
 })
 </script>

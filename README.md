@@ -62,7 +62,7 @@ location /api {
   }
 ```
 
-### .dot fine for different env
+### 🌈 .dot fine for different env
 ```bash
 # JUST A FLAG For 开发环境
 ENV = 'development'
@@ -76,7 +76,7 @@ TEST_ATTR=Leslie ATTR # NOT
 ```
 - 必须以`VITE_`开头,配置完之后需要重新启动项目或者打包项目
 
-### .dot files for different env - Typescript IntelliSense
+### 🌈 .dot files for different env - Typescript IntelliSense
 - To achieve, you can create an` env.d.ts` in `src` directory, then augment `ImportMetaEnv` like this:
 ```ts
 interface ImportMetaEnv {
