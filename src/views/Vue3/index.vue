@@ -38,12 +38,15 @@
     <RefElement />
     <el-divider>InputModel </el-divider>
     <div>父组件 {{ title }}</div>
-    <InputModel v-model:title="title" />
+    <InputModel v-model:title="title" />PropsDemo
+
+    <el-divider>PropsDemo </el-divider>
+    <PropsDemo :title="title" />
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, reactive } from 'vue'
+import { ref, defineComponent } from 'vue'
 import Child from './child.vue'
 import RefDemo from './ref-toRef.vue'
 import ToRefs from './toRefs.vue'
@@ -63,6 +66,7 @@ import CurrentInstance from './current-instance'
 import UseStoreDemo from './use-store-demo'
 import RefElement from './ref-element.vue'
 import InputModel from './V-Model-Input.vue'
+import PropsDemo from './props-demo'
 export default defineComponent({
   name: 'Home',
   components: {
@@ -85,6 +89,7 @@ export default defineComponent({
     UseStoreDemo,
     RefElement,
     InputModel,
+    PropsDemo,
   },
   setup: () => {
     const title = ref('title')
