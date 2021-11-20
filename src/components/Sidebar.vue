@@ -10,34 +10,11 @@
   >
     <el-menu-item index="/">
       <i class="el-icon-timer"></i>
-      <template #title>Home at Here</template>
+      <template #title
+        >Home at Here => {{ isCollapse ? 'Yes' : 'No' }}</template
+      >
     </el-menu-item>
 
-    <!-- <el-submenu index="1">
-      <template #title>
-        <i class="el-icon-ship"></i>
-        <span>Gitlab 操作</span>
-      </template>
-
-      <el-menu-item-group>
-        <el-menu-item index="/">选项1</el-menu-item>
-        <el-menu-item index="/">选项2</el-menu-item>
-        <el-menu-item index="/">选项3</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu> -->
-
-    <!-- <el-submenu index="2">
-      <template #title>
-        <i class="el-icon-loading"></i>
-        <span>Jenkins 操作</span>
-      </template>
-
-      <el-menu-item-group>
-        <el-menu-item index="/">选项1</el-menu-item>
-        <el-menu-item index="/">选项2</el-menu-item>
-        <el-menu-item index="/">选项3</el-menu-item>
-      </el-menu-item-group>
-    </el-submenu> -->
     <el-submenu index="3">
       <template #title>
         <i class="el-icon-loading"></i>
@@ -60,7 +37,7 @@
       <el-menu-item-group>
         <el-menu-item index="/vue3/features">Vue3</el-menu-item>
       </el-menu-item-group>
-       <el-menu-item-group>
+      <el-menu-item-group>
         <el-menu-item index="/vue2/features">Vue2</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
@@ -77,9 +54,11 @@ export default defineComponent({
     const isCollapse = ref(false)
 
     const handleOpen = (key: string, keyPath: string) => {
+      isCollapse.value = true
       console.log(key, keyPath)
     }
     const handleClose = (key: string, keyPath: string) => {
+      isCollapse.value = false
       console.log(key, keyPath)
     }
 
